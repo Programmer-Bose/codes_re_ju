@@ -1,0 +1,21 @@
+Function Name,Parameters,Return Type,Description
+kh4_init,"int argc, char *argv[]",int,Initializes the Khepera IV robot and its subsystems.
+knet_open,"const char *name, int bus_type, int adr, void *device_specific",knet_dev_t*,Opens a communication socket with the robot or another device.
+knet_close,knet_dev_t *dev,int,Closes the communication with the robot or another device.
+kh4_set_speed,"int left_speed, int right_speed, knet_dev_t *dsPic",int,Sets the speed of the left and right motors.
+kh4_SetMode,"int mode, knet_dev_t *dsPic",int,"Sets the motor control mode (e.g., speed control, idle)."
+kh4_proximity_measure,"int *sensor_values, knet_dev_t *dsPic",int,Reads the proximity sensors' values.
+kh4_odo_reset,knet_dev_t *dsPic,void,Resets the odometry counters.
+kh4_odo_read,"int *pos_left, int *pos_right, knet_dev_t *dsPic",int,Reads the odometry counters for the left and right wheels.
+kh4_measure_us,"unsigned int *us_values, knet_dev_t *dsPic",int,Fetches ultrasonic sensor readings and stores them in an array.
+kh4_battery_voltage,knet_dev_t *dsPic,unsigned int,Retrieves the battery voltage.
+kh4_battery_current,knet_dev_t *dsPic,unsigned int,Retrieves the battery current.
+kh4_battery_level,knet_dev_t *dsPic,unsigned int,Retrieves the battery level (percentage).
+kh4_beep,"int frequency, int duration, knet_dev_t *dsPic",int,Makes the robot emit a beep sound.
+kh4_set_leds,"int led_state, knet_dev_t *dsPic",int,Sets the state of the robot's LEDs.
+kh4_get_data,"const char *command, char *response, int len, knet_dev_t *dsPic",int,Sends a command to the robot and retrieves the response.
+kh4_ir_distance,"int *sensor_values, knet_dev_t *dsPic",int,Reads the distance measured by the IR sensors.
+kh4_ultrasonic_measure,"int *sensor_values, knet_dev_t *dsPic",int,Reads the values from the ultrasonic sensors.
+kh4_status,"int *status, knet_dev_t *dsPic",int,Retrieves the robot's current status.
+kh4_revision,char *revision,int,Retrieves the firmware revision of the robot.
+kh4_get_sys_microsec,knet_dev_t *dsPic,unsigned int,Retrieves the current system time in microseconds.
