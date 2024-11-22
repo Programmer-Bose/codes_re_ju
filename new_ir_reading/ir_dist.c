@@ -7,7 +7,7 @@ static knet_dev_t * dsPic; // for microcontroller access
 
 // Function to read and display IR sensor values
 void read_ir_sensors() {
-    char proximity_values[24];  // buffer for proximity values
+    char proximity_values[16];  // buffer for proximity values
     int i;                     // loop counter (declared at start for C89 compatibility)
     int ambient, reflected;    // variables to store processed values
     double distance;           // to store calculated distance
